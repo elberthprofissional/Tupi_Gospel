@@ -1,0 +1,71 @@
+/* --- Tupi Gospel Premium Design System --- */
+
+/* Configurações Globais */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Cor de Seleção de Texto Customizada */
+::selection {
+    background-color: #1D4ED8; /* brand-blue */
+    color: white;
+}
+::-moz-selection {
+    background-color: #1D4ED8;
+    color: white;
+}
+
+/* Barra de Rolagem Customizada e Elegante */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+    background: #CBD5E1; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8; 
+}
+
+/* Utilitários de Design */
+.premium-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: translateY(0) scale(1);
+    backface-visibility: hidden;
+}
+
+.premium-card:hover {
+    transform: translateY(-8px) scale(1.01);
+}
+
+.premium-shadow {
+    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.05);
+}
+
+.premium-card:hover .premium-shadow {
+    box-shadow: 0 20px 40px -12px rgba(15, 23, 42, 0.1),
+                0 0 15px -1px rgba(217, 119, 6, 0.15); /* Dourado sutil */
+}
+
+/* Gradientes Customizados em CSS */
+.bg-brand-logo {
+    background: linear-gradient(135deg, #1D4ED8 0%, #0F172A 100%);
+}
+
+.bg-status-open {
+    background: linear-gradient(135deg, #0F172A 0%, #172554 100%);
+}
+
+.bg-hero-gradient {
+    background: radial-gradient(circle at center, #F8FAFC 0%, #FFFFFF 100%);
+}
+
+.border-premium {
+    border-color: rgba(226, 232, 240, 0.6);
+}
