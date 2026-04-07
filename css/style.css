@@ -10,11 +10,11 @@ body {
 
 /* Cor de Seleção de Texto Customizada */
 ::selection {
-    background-color: #1D4ED8; /* brand-blue */
+    background-color: #D97706; /* brand-gold */
     color: white;
 }
 ::-moz-selection {
-    background-color: #1D4ED8;
+    background-color: #D97706;
     color: white;
 }
 
@@ -115,9 +115,10 @@ body {
 }
 
 .contact-action-primary {
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
     color: #fff;
-    box-shadow: 0 18px 40px -20px rgba(37,99,235,0.9);
+    box-shadow: 0 18px 40px -20px rgba(217,119,6,0.7);
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
 .contact-action-secondary {
@@ -220,4 +221,13 @@ body {
     #the-bible.is-open #bible-cover {
         box-shadow: -10px 10px 20px rgba(0,0,0,0.4);
     }
+}
+
+/* Ajustes de acabamento */
+#navbar { backdrop-filter: blur(14px); }
+.contact-mini-card strong { display:block; font-size:1rem; color:#fff; margin-top:.5rem; }
+.contact-mini-card span { display:block; color:#cbd5e1; font-size:.92rem; line-height:1.5; margin-top:.25rem; }
+#fab-button { animation:none !important; }
+@media (max-width: 768px) {
+  h1 { word-break: break-word; }
 }
