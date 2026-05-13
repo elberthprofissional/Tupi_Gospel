@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // Verifica os status
         const isOpen = hour >= 8 && hour < 19;
         const isMorningClosed = hour < 8;
-        const isNightClosed = hour >= 19;
 
         const heroStatusBtn = document.getElementById('hero-status-indicator');
         const heroStatusIcon = document.getElementById('hero-status-icon');
@@ -55,39 +54,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (heroStatusBtn && heroStatusIcon && heroStatusText) {
             
-            // Base Premium Button Classes
-            const baseBtnClass = "inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold transition-all duration-300 w-full sm:w-auto hover:shadow-lg ";
+            // Base Premium Indicator Classes
+            const baseClass = "inline-flex items-center gap-4 px-8 py-3 rounded-full border-2 shadow-xl text-base font-bold transition-all transform hover:scale-105 ";
 
             if (isOpen) {
-                // ABERTO: Design Escuro Premium com Pulso Verde
-                heroStatusBtn.className = baseBtnClass + 'bg-status-open text-white hover:bg-black group border-premium hover:-translate-y-1';
-                
+                // ABERTO
+                heroStatusBtn.className = baseClass + 'bg-white border-green-500 text-green-600 shadow-green-100';
                 heroStatusIcon.innerHTML = `
                     <span class="relative flex h-3 w-3">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-3 w-3 bg-green-400"></span>
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                     </span>
                 `;
-                heroStatusIcon.className = "group-hover:scale-110 transition-transform";
-                heroStatusText.className = "transition-colors group-hover:text-green-200";
-                heroStatusText.textContent = 'Loja Aberta';
-                heroStatusBtn.href = "#produtos";
+                heroStatusText.textContent = 'LOJA ABERTA AGORA';
                 
-            } else if (isMorningClosed) {
-                // FECHADO DE MANHÃ
-                heroStatusBtn.className = baseBtnClass + 'bg-white border-premium text-gray-500 premium-shadow cursor-default hover:shadow-sm';
-                heroStatusIcon.innerHTML = '<i class="ph-fill ph-sun text-2xl text-amber-400"></i>';
-                heroStatusText.className = "text-gray-500 font-medium";
-                heroStatusText.textContent = 'Abriremos às 08h';
-                heroStatusBtn.removeAttribute('href'); 
-                
-            } else if (isNightClosed) {
-                // FECHADO DE NOITE
-                heroStatusBtn.className = baseBtnClass + 'bg-white border-premium text-gray-500 premium-shadow cursor-default hover:shadow-sm';
-                heroStatusIcon.innerHTML = '<i class="ph-fill ph-moon text-2xl text-blue-300"></i>';
-                heroStatusText.className = "text-gray-500 font-medium";
-                heroStatusText.textContent = 'Fechado - Abrimos amanhã às 08h';
-                heroStatusBtn.removeAttribute('href'); 
+            } else {
+                // FECHADO
+                heroStatusBtn.className = baseClass + 'bg-stone-800 border-stone-700 text-white shadow-stone-200';
+                heroStatusIcon.innerHTML = '<i class="ph ph-moon-stars text-xl text-blue-300"></i>';
+                heroStatusText.textContent = isMorningClosed ? 'ABRIREMOS ÀS 08H' : 'FECHADO • ABRIMOS ÀS 08H';
             }
         }
     }
@@ -108,7 +93,10 @@ document.addEventListener("DOMContentLoaded", () => {
         { text: '"Tudo posso naquele que me fortalece."', reference: 'Filipenses 4:13' },
         { text: '"Entrega o teu caminho ao Senhor; confia nele, e ele o fará."', reference: 'Salmos 37:5' },
         { text: '"Porque para Deus nada é impossível."', reference: 'Lucas 1:37' },
-        { text: '"O choro pode durar uma noite, mas a alegria vem pela manhã."', reference: 'Salmos 30:5' }
+        { text: '"O choro pode durar uma noite, mas a alegria vem pela manhã."', reference: 'Salmos 30:5' },
+        { text: '"Lâmpada para os meus pés é tua palavra, e luz para o meu caminho."', reference: 'Salmos 119:105' },
+        { text: '"Deus é o nosso refúgio e fortaleza, socorro bem presente na angústia."', reference: 'Salmos 46:1' },
+        { text: '"Eu sou o caminho, e a verdade e a vida."', reference: 'João 14:6' }
     ];
 
     const verseText = document.getElementById('verse-text');
@@ -139,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 newVerseButton.style.opacity = '1';
                 newVerseButton.style.transform = 'translateY(0)';
                 newVerseButton.style.pointerEvents = 'auto';
-            }, 800);
+            }, 1000);
             return;
         }
 
@@ -149,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // 2. Cria a página falsa que vai girar
         const flippingPage = document.createElement('div');
-        flippingPage.className = 'page-flip-anim flex flex-col items-center justify-center text-center';
+        flippingPage.className = 'page-flip-anim flex flex-col items-center justify-center text-center p-12';
         flippingPage.innerHTML = pageContent;
         
         // 3. Adiciona a página girando por cima de tudo
@@ -161,15 +149,19 @@ document.addEventListener("DOMContentLoaded", () => {
             nextIndex = Math.floor(Math.random() * verses.length);
         }
         currentVerseIndex = nextIndex;
-        verseText.textContent = verses[currentVerseIndex].text;
-        verseReference.textContent = verses[currentVerseIndex].reference;
+        
+        // Pequeno delay para a troca de texto não ser visível antes da página cobrir
+        setTimeout(() => {
+            verseText.textContent = verses[currentVerseIndex].text;
+            verseReference.textContent = verses[currentVerseIndex].reference;
+        }, 150);
 
-        // 5. Destrói o elemento animado quando a animação acabar (800ms)
+        // 5. Destrói o elemento animado quando a animação acabar (1200ms)
         setTimeout(() => {
             if (flippingPage.parentNode) {
                 flippingPage.parentNode.removeChild(flippingPage);
             }
-        }, 800);
+        }, 1200);
     }
 
     // Eventos de clique da Bíblia
