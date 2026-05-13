@@ -12,7 +12,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -25,16 +25,23 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        serif: ['Lora', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
                     },
                     colors: {
+                        premium: {
+                            cream: '#FAF9F6',
+                            charcoal: '#1C1917',
+                            blue: '#7DD3FC',
+                            lightBlue: '#F0F9FF',
+                            clay: '#44403C'
+                        },
                         brand: {
-                            navy: '#0F172A',     
-                            blue: '#1D4ED8',     
-                            gold: '#D97706',     
-                            bg: '#F8FAFC', 
-                            black: '#030712', 
+                            navy: '#1C1917',     
+                            blue: '#7DD3FC',     
+                            gold: '#7DD3FC',     
+                            bg: '#FAF9F6', 
+                            black: '#1C1917', 
                             white: '#FFFFFF'
                         }
                     }
@@ -47,480 +54,386 @@
     
     <style>
         .swiper-pagination-bullet-active {
-            background-color: #D97706 !important; 
+            background-color: #7DD3FC !important; 
         }
     </style>
 </head>
-<body class="font-sans antialiased bg-brand-bg text-brand-navy flex flex-col min-h-screen">
+<body class="font-sans antialiased bg-premium-cream text-premium-charcoal flex flex-col min-h-screen">
 
-    <nav id="navbar" class="sticky top-0 w-full z-50 transition-all duration-300 py-3 bg-brand-bg/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <nav id="navbar" class="sticky top-0 w-full z-50 transition-all duration-300 py-6 bg-premium-cream/90 backdrop-blur-md border-b border-stone-200">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="flex justify-center items-center gap-6">
-                <a href="#" class="flex items-center group text-center">
-                    <div class="flex flex-col">
-                        <span class="font-extrabold text-3xl tracking-tighter text-brand-navy leading-none">Tupi <span class="text-brand-blue">Gospel</span></span>
-                        <span class="text-[13px] text-gray-500 font-bold uppercase tracking-[0.2em] mt-1">Artigos religiosos e atendimento de confiança</span>
-                    </div>
+            <div class="flex justify-center items-center text-center">
+                <a href="#" class="flex flex-col group">
+                    <span class="font-serif italic text-3xl md:text-4xl tracking-tight text-premium-charcoal leading-none">Tupi <span class="text-premium-blue font-normal">Gospel</span></span>
+                    <span class="text-[10px] text-stone-500 font-medium uppercase tracking-[0.4em] mt-2">Artigos Religiosos & Locação</span>
                 </a>
             </div>
         </div>
     </nav>
 
-    <section class="bg-brand-black text-white border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-3">
-            <div class="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-8 text-center text-sm md:text-base font-semibold">
-                <span class="inline-flex items-center gap-2"><i class="ph-fill ph-phone-call text-brand-gold"></i> Atendimento por telefone</span>
-                <span class="hidden md:inline text-white/20">•</span>
-                <span class="inline-flex items-center gap-2"><i class="ph-fill ph-storefront text-brand-blue"></i> Loja física no Bairro Tupi</span>
-                <span class="hidden md:inline text-white/20">•</span>
-                <span class="inline-flex items-center gap-2"><i class="ph-fill ph-map-pin text-emerald-400"></i> Belo Horizonte - MG</span>
-            </div>
-        </div>
-    </section>
-
-    <header class="py-24 md:py-32 text-center px-6 bg-hero-gradient relative overflow-hidden">
-        <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-slate-50 to-transparent opacity-60"></div>
-        <div class="max-w-5xl mx-auto flex flex-col items-center relative z-10" data-aos="fade-up">
-            
-            <h1 class="text-6xl md:text-9xl font-extrabold text-brand-black mb-8 tracking-tighter leading-tight max-w-4xl">
-                Tupi Gospel
+    <header class="py-32 md:py-48 text-center px-6 bg-premium-cream relative overflow-hidden">
+        <div class="max-w-4xl mx-auto flex flex-col items-center relative z-10" data-aos="fade-up">
+            <h1 class="text-6xl md:text-9xl font-serif text-premium-charcoal mb-10 tracking-tight leading-[1.1]">
+                Onde a fé encontra <br> <span class="italic text-premium-blue">o acolhimento.</span>
             </h1>
-            <p class="text-2xl md:text-3xl text-gray-600 mb-8 font-medium leading-relaxed max-w-4xl mx-auto">
-                Loja física em Belo Horizonte com bíblias, folhetos, óleo de unção, materiais para igrejas e locação de mesas e cadeiras para eventos.
+            <p class="text-xl md:text-2xl text-stone-500 mb-16 font-light leading-relaxed max-w-2xl mx-auto">
+                Uma curadoria completa de artigos religiosos e soluções para sua comunidade, com o atendimento próximo que você merece.
             </p>
-            <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm text-sm md:text-base font-bold text-brand-navy">
-                    <i class="ph-fill ph-star text-brand-gold text-lg"></i>
-                    Avaliação 5.0 no Google
-                </div>
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm text-sm md:text-base font-bold text-brand-navy">
-                    <i class="ph-fill ph-clock text-brand-blue text-lg"></i>
-                    Atendimento todos os dias, de 08h às 19h
-                </div>
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm text-sm md:text-base font-bold text-brand-navy">
-                    <i class="ph-fill ph-map-pin text-emerald-600 text-lg"></i>
-                    Rua Joaquim Cardoso, 368 - Tupi
-                </div>
-            </div>
             
-            <div class="flex flex-col items-center gap-5 w-full">
-                <a id="hero-status-indicator" href="#produtos" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 text-white bg-slate-300 shadow-inner">
-                    <span id="hero-status-icon"><i class="ph ph-spinner-gap animate-spin text-3xl text-slate-500"></i></span>
-                    <span id="hero-status-text" class="text-slate-600">Verificando disponibilidade...</span>
-                </a>
-
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
-                    <button type="button" data-open-phone-modal class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-brand-blue text-white font-extrabold text-lg shadow-xl shadow-brand-blue/20 hover:-translate-y-1 hover:bg-blue-700 transition-all w-full sm:w-auto">
-                        <i class="ph-fill ph-phone-call text-2xl"></i>
-                        Ligar agora
-                    </button>
-                    <a href="https://www.google.com/maps/search/?api=1&query=R.+Joaquim+Cardoso,+368+-+Tupi+B,+Belo+Horizonte+-+MG,+31842-500" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-white text-brand-navy font-extrabold text-lg border border-slate-200 shadow-lg hover:-translate-y-1 hover:border-brand-gold hover:text-brand-gold transition-all w-full sm:w-auto">
-                        <i class="ph-fill ph-map-pin text-2xl"></i>
-                        Como chegar
-                    </a>
-                </div>
+            <div id="hero-status-indicator" class="inline-flex items-center gap-3 px-6 py-2.5 rounded-full bg-white border border-stone-100 shadow-sm text-sm font-medium transition-all">
+                <span id="hero-status-icon"><i class="ph ph-spinner-gap animate-spin text-lg text-stone-400"></i></span>
+                <span id="hero-status-text" class="text-stone-500">Verificando loja...</span>
             </div>
         </div>
-
-        <div class="max-w-6xl mx-auto px-6 lg:px-8 mt-16 relative z-10" data-aos="fade-up" data-aos-delay="100">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-white/90 backdrop-blur-md border border-white rounded-2xl px-6 py-5 premium-shadow text-left">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-2xl bg-brand-blue/10 text-brand-blue flex items-center justify-center">
-                            <i class="ph-fill ph-storefront text-2xl"></i>
-                        </div>
-                        <div>
-                            <p class="font-extrabold text-brand-navy text-lg">Loja física em Belo Horizonte</p>
-                            <p class="text-gray-500 font-medium">Atendimento tradicional, direto e de confiança.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white/90 backdrop-blur-md border border-white rounded-2xl px-6 py-5 premium-shadow text-left">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-2xl bg-brand-gold/10 text-brand-gold flex items-center justify-center">
-                            <i class="ph-fill ph-package text-2xl"></i>
-                        </div>
-                        <div>
-                            <p class="font-extrabold text-brand-navy text-lg">Produtos para sua rotina</p>
-                            <p class="text-gray-500 font-medium">Variedade para igreja, lar e devocional.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white/90 backdrop-blur-md border border-white rounded-2xl px-6 py-5 premium-shadow text-left">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center">
-                            <i class="ph-fill ph-chair text-2xl"></i>
-                        </div>
-                        <div>
-                            <p class="font-extrabold text-brand-navy text-lg">Locação para eventos</p>
-                            <p class="text-gray-500 font-medium">Mesas, cadeiras e toalhas com qualidade.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-brand-bg to-transparent z-0"></div>
     </header>
 
-    <section id="produtos" class="py-20 flex-grow bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 -mt-20 relative z-20" data-aos="fade-up" data-aos-delay="100">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white border border-stone-200 rounded-2xl px-8 py-8 shadow-sm hover:shadow-md transition-shadow text-center">
+                    <div class="w-12 h-12 rounded-full bg-stone-50 text-premium-blue flex items-center justify-center mx-auto mb-4">
+                        <i class="ph ph-storefront text-2xl"></i>
+                    </div>
+                    <p class="font-bold text-premium-charcoal text-lg mb-2">Loja Física</p>
+                    <p class="text-stone-500 text-sm font-light">Atendimento tradicional e de confiança no Bairro Tupi.</p>
+                </div>
+                <div class="bg-white border border-stone-200 rounded-2xl px-8 py-8 shadow-sm hover:shadow-md transition-shadow text-center">
+                    <div class="w-12 h-12 rounded-full bg-stone-50 text-premium-blue flex items-center justify-center mx-auto mb-4">
+                        <i class="ph ph-package text-2xl"></i>
+                    </div>
+                    <p class="font-bold text-premium-charcoal text-lg mb-2">Variedade</p>
+                    <p class="text-stone-500 text-sm font-light">Produtos selecionados para sua igreja, lar e devocional.</p>
+                </div>
+                <div class="bg-white border border-stone-200 rounded-2xl px-8 py-8 shadow-sm hover:shadow-md transition-shadow text-center">
+                    <div class="w-12 h-12 rounded-full bg-stone-50 text-premium-blue flex items-center justify-center mx-auto mb-4">
+                        <i class="ph ph-chair text-2xl"></i>
+                    </div>
+                    <p class="font-bold text-premium-charcoal text-lg mb-2">Locação</p>
+                    <p class="text-stone-500 text-sm font-light">Estrutura completa com mesas e cadeiras para seu evento.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="produtos" class="py-32 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-5xl font-extrabold text-brand-black mb-4 tracking-tighter">O que você encontra aqui</h2>
-                <div class="w-20 h-1.5 bg-brand-gold mx-auto rounded-full"></div>
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6" data-aos="fade-up">
+                <div class="max-w-2xl">
+                    <span class="text-premium-blue font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Nosso Catálogo</span>
+                    <h2 class="text-4xl md:text-6xl font-serif text-premium-charcoal tracking-tight">O que você <span class="italic">encontra aqui.</span></h2>
+                </div>
+                <p class="text-stone-500 max-w-sm font-light leading-relaxed">
+                    De bíblias de estudo a materiais de apoio para sua igreja, nossa seleção é feita com carinho e propósito.
+                </p>
             </div>
 
-            <div class="flex flex-col lg:flex-row items-center gap-16 bg-slate-50 rounded-3xl p-8 md:p-12 premium-shadow border border-slate-100">
-                
-                <div class="w-full lg:w-1/2" data-aos="fade-up">
-                    <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-slate-200 text-brand-gold font-bold text-base uppercase tracking-widest mb-6 shadow-sm">
-                        <i class="ph-bold ph-books text-xl"></i>
-                        Artigos Cristãos
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-12" data-aos="fade-up">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-bold text-premium-charcoal flex items-center gap-3">
+                                <span class="w-8 h-px bg-premium-blue"></span> Bíblias
+                            </h3>
+                            <p class="text-stone-500 text-sm font-light leading-relaxed">Modelos de estudo, infantis, letras gigantes e harpas cristãs.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-bold text-premium-charcoal flex items-center gap-3">
+                                <span class="w-8 h-px bg-premium-blue"></span> Apoio Igreja
+                            </h3>
+                            <p class="text-stone-500 text-sm font-light leading-relaxed">Folhetos, envelopes para dízimo, diplomas e materiais para consagração.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-bold text-premium-charcoal flex items-center gap-3">
+                                <span class="w-8 h-px bg-premium-blue"></span> Unção
+                            </h3>
+                            <p class="text-stone-500 text-sm font-light leading-relaxed">Óleos e essências preparadas para oração e momentos de fé.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-bold text-premium-charcoal flex items-center gap-3">
+                                <span class="w-8 h-px bg-premium-blue"></span> Multimídia
+                            </h3>
+                            <p class="text-stone-500 text-sm font-light leading-relaxed">Pen drives com hinos selecionados e recursos audiovisuais.</p>
+                        </div>
                     </div>
-                    
-                    <h3 class="text-4xl md:text-5xl font-extrabold text-brand-navy mb-6 tracking-tight leading-tight">
-                        Tudo para o seu devocional, igreja e comunidade.
-                    </h3>
-                    
-                    <p class="text-xl text-gray-600 mb-8 leading-relaxed font-medium">
-                        Não importa se você busca um material para estudo pessoal ou recursos para a sua igreja. Temos um estoque diverso, preparado para abençoar a sua vida:
-                    </p>
-                    
-                    <ul class="space-y-5 mb-10">
-                        <li class="flex items-start gap-3">
-                            <i class="ph-fill ph-check-circle text-brand-blue text-3xl shrink-0 mt-0.5"></i>
-                            <div>
-                                <strong class="text-brand-navy text-xl block">Bíblias Sagradas</strong>
-                                <span class="text-gray-500 text-base block mt-1">Modelos de estudo, infantis, letras gigantes e harpas.</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="ph-fill ph-check-circle text-brand-blue text-3xl shrink-0 mt-0.5"></i>
-                            <div>
-                                <strong class="text-brand-navy text-xl block">Folhetos e Envelopes</strong>
-                                <span class="text-gray-500 text-base block mt-1">Mensagens de evangelização, dízimos, ofertas e campanhas.</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="ph-fill ph-check-circle text-brand-blue text-3xl shrink-0 mt-0.5"></i>
-                            <div>
-                                <strong class="text-brand-navy text-xl block">Óleos de Unção</strong>
-                                <span class="text-gray-500 text-base block mt-1">Essências puras preparadas para oração e consagração.</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="ph-fill ph-check-circle text-brand-blue text-3xl shrink-0 mt-0.5"></i>
-                            <div>
-                                <strong class="text-brand-navy text-xl block">Materiais para Igreja</strong>
-                                <span class="text-gray-500 text-base block mt-1">Diplomas de consagração e Pen Drives com 600 hinos.</span>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="ph-fill ph-plus-circle text-brand-gold text-3xl shrink-0 mt-0.5"></i>
-                            <div>
-                                <strong class="text-brand-gold text-xl block">E muito mais...</strong>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
 
-                <div class="w-full lg:w-1/2 relative group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="relative rounded-3xl overflow-hidden aspect-square premium-shadow border-8 border-white bg-white">
+                <div class="relative group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative rounded-3xl overflow-hidden aspect-square border border-stone-100 bg-stone-50">
                         <div class="swiper vitrineSwiper w-full h-full">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide bg-slate-50 flex items-center justify-center p-8">
-                                    <img src="img/produto1.webp" alt="Produto Tupi Gospel" class="w-full h-full object-contain filter drop-shadow-sm transition-transform duration-700 hover:scale-105">
+                                <div class="swiper-slide flex items-center justify-center p-12">
+                                    <img src="img/produto1.webp" alt="Bíblias" class="w-full h-full object-contain filter drop-shadow-xl">
                                 </div>
-                                <div class="swiper-slide bg-slate-50 flex items-center justify-center p-8">
-                                    <img src="img/produto2.webp" alt="Produto Tupi Gospel" class="w-full h-full object-contain filter drop-shadow-sm transition-transform duration-700 hover:scale-105">
+                                <div class="swiper-slide flex items-center justify-center p-12">
+                                    <img src="img/produto2.webp" alt="Materiais" class="w-full h-full object-contain filter drop-shadow-xl">
                                 </div>
-                                <div class="swiper-slide bg-slate-50 flex items-center justify-center p-8">
-                                    <img src="img/produto4.webp" alt="Produto Tupi Gospel" class="w-full h-full object-contain filter drop-shadow-sm transition-transform duration-700 hover:scale-105">
+                                <div class="swiper-slide flex items-center justify-center p-12">
+                                    <img src="img/produto4.webp" alt="Destaques" class="w-full h-full object-contain filter drop-shadow-xl">
                                 </div>
                             </div>
-                            <div class="swiper-pagination pb-2"></div>
+                            <div class="swiper-pagination pb-4"></div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-brand-bg border-y border-slate-100">
+    <section class="py-32 bg-premium-cream border-y border-stone-200">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-14" data-aos="fade-up">
-                <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-slate-200 text-brand-gold font-bold text-sm uppercase tracking-widest mb-5 shadow-sm">
-                    <i class="ph-bold ph-seal-check text-lg"></i>
-                    Diferenciais
-                </div>
-                <h2 class="text-5xl font-extrabold text-brand-black mb-4 tracking-tighter">Por que escolher a Tupi Gospel</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto font-medium">Mais do que vender produtos, a loja entrega cuidado, presença local e soluções para o dia a dia de famílias, igrejas e eventos.</p>
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-premium-blue font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Diferenciais</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-premium-charcoal">Por que a Tupi Gospel?</h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="premium-card bg-white rounded-3xl p-8 border border-slate-200 premium-shadow" data-aos="fade-up" data-aos-delay="0">
-                    <div class="w-14 h-14 rounded-2xl bg-brand-blue/10 text-brand-blue flex items-center justify-center mb-6 border border-brand-blue/20 shadow-sm">
-                        <i class="ph-fill ph-hand-heart text-3xl"></i>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center group" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-16 h-16 rounded-full bg-white border border-stone-200 flex items-center justify-center mx-auto mb-8 group-hover:border-premium-blue transition-colors">
+                        <i class="ph ph-hand-heart text-3xl text-stone-400 group-hover:text-premium-blue transition-colors"></i>
                     </div>
-                    <h3 class="text-2xl font-extrabold text-brand-navy mb-3 leading-tight">Atendimento humano</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed font-medium">Atendimento com respeito, paciência e atenção de quem entende a realidade do bairro e das igrejas da região.</p>
+                    <h3 class="text-xl font-bold text-premium-charcoal mb-4">Atendimento Humano</h3>
+                    <p class="text-stone-500 font-light leading-relaxed">Respeito e atenção de quem entende a realidade local e as necessidades de cada comunidade.</p>
                 </div>
 
-                <div class="premium-card bg-white rounded-3xl p-8 border border-slate-200 premium-shadow" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-14 h-14 rounded-2xl bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-6 border border-brand-gold/20 shadow-sm">
-                        <i class="ph-fill ph-package text-3xl"></i>
+                <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-full bg-white border border-stone-200 flex items-center justify-center mx-auto mb-8 group-hover:border-premium-blue transition-colors">
+                        <i class="ph ph-list-checks text-3xl text-stone-400 group-hover:text-premium-blue transition-colors"></i>
                     </div>
-                    <h3 class="text-2xl font-extrabold text-brand-navy mb-3 leading-tight">Tudo em um só lugar</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed font-medium">Artigos cristãos, materiais para igreja e locação de estruturas para eventos em um atendimento só.</p>
+                    <h3 class="text-xl font-bold text-premium-charcoal mb-4">Tudo em um lugar</h3>
+                    <p class="text-stone-500 font-light leading-relaxed">Desde a literatura sagrada até a estrutura para o seu evento, resolvemos tudo para você.</p>
                 </div>
 
-                <div class="premium-card bg-white rounded-3xl p-8 border border-slate-200 premium-shadow" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-6 border border-emerald-200 shadow-sm">
-                        <i class="ph-fill ph-map-pin-area text-3xl"></i>
+                <div class="text-center group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-full bg-white border border-stone-200 flex items-center justify-center mx-auto mb-8 group-hover:border-premium-blue transition-colors">
+                        <i class="ph ph-map-pin text-3xl text-stone-400 group-hover:text-premium-blue transition-colors"></i>
                     </div>
-                    <h3 class="text-2xl font-extrabold text-brand-navy mb-3 leading-tight">Facilidade para chegar</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed font-medium">Loja física no Bairro Tupi, com rota fácil no mapa e opção de entrega para ganhar tempo no dia a dia.</p>
+                    <h3 class="text-xl font-bold text-premium-charcoal mb-4">Facilidade de Acesso</h3>
+                    <p class="text-stone-500 font-light leading-relaxed">Localização estratégica no Bairro Tupi e serviço de entrega eficiente para poupar seu tempo.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="entregas" class="py-24 bg-brand-navy text-white relative overflow-hidden border-t-2 border-white/5">
-        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-brand-gold/20 via-brand-navy to-black pointer-events-none"></div>
-        
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
-                
-                <div class="w-full lg:w-1/2 relative group" data-aos="fade-up">
-                    <div class="absolute -inset-4 bg-brand-gold/10 rounded-[3rem] transform rotate-3 group-hover:rotate-6 transition-transform duration-500 blur-xl"></div>
-                    
-                    <div class="relative rounded-3xl overflow-hidden aspect-[4/3] premium-shadow border-4 border-slate-700 bg-slate-800">
-                        <img src="img/Entregas.webp" alt="Carro de Entregas Tupi Gospel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    </div>
-                    
-                    <div class="absolute -bottom-6 -left-6 bg-brand-gold text-white font-extrabold px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-4 border-2 border-white/20">
-                        <i class="ph-fill ph-package text-4xl"></i>
-                        <span class="text-xl leading-tight">Entrega<br>Rápida!</span>
-                    </div>
-                </div>
-
-                <div class="w-full lg:w-1/2" data-aos="fade-up" data-aos-delay="100">
-                    <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-800 border border-slate-700 text-brand-gold font-bold text-base uppercase tracking-widest mb-6 shadow-sm">
-                        <i class="ph-bold ph-moped text-xl"></i>
-                        Comodidade para você
-                    </div>
-                    
-                    <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tighter leading-tight">
-                        Entregas a <span class="text-brand-gold">Domicílio</span>
-                    </h2>
-                    
-                    <p class="text-xl text-slate-300 mb-8 leading-relaxed font-medium">
-                        Sabemos que o seu tempo é precioso. Por isso, a Tupi Gospel leva a bênção até a porta da sua casa ou da sua igreja! Com o nosso serviço de entrega a domicílio, você recebe seus produtos com rapidez, segurança e o cuidado que você merece.
+    <section id="entregas" class="py-32 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                <div class="w-full lg:w-1/2" data-aos="fade-right">
+                    <span class="text-premium-blue font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Conveniência</span>
+                    <h2 class="text-4xl md:text-6xl font-serif text-premium-charcoal mb-8 tracking-tight">Levamos a bênção <br> <span class="italic">até você.</span></h2>
+                    <p class="text-stone-500 text-lg font-light leading-relaxed mb-10">
+                        Entendemos a correria do dia a dia. Por isso, oferecemos um serviço de entrega cuidadoso e ágil para toda a região do Bairro Tupi.
                     </p>
-                    
-                    <ul class="space-y-6 mb-10">
-                        <li class="flex items-center gap-5">
-                            <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/20 shadow-md">
-                                <i class="ph-fill ph-clock text-white text-3xl"></i>
+                    <ul class="space-y-6">
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-stone-50 flex items-center justify-center text-premium-blue border border-stone-100">
+                                <i class="ph ph-clock-countdown"></i>
                             </div>
-                            <div>
-                                <strong class="text-white text-xl block leading-tight">Agilidade garantida</strong>
-                                <span class="text-slate-400 text-lg">Faça seu pedido e receba no conforto do seu lar.</span>
-                            </div>
+                            <span class="text-stone-600 font-medium">Agilidade e pontualidade garantidas.</span>
                         </li>
-                        <li class="flex items-center gap-5">
-                            <div class="w-14 h-14 rounded-full bg-brand-gold/20 flex items-center justify-center shrink-0 border border-brand-gold/30 shadow-md">
-                                <i class="ph-fill ph-map-pin-line text-brand-gold text-3xl"></i>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-stone-50 flex items-center justify-center text-premium-blue border border-stone-100">
+                                <i class="ph ph-moped"></i>
                             </div>
-                            <div>
-                                <strong class="text-white text-xl block leading-tight">Cobertura local</strong>
-                                <span class="text-slate-400 text-lg">Atendemos toda a região do Bairro Tupi e arredores.</span>
-                            </div>
+                            <span class="text-stone-600 font-medium">Atendimento em domicílio e igrejas.</span>
                         </li>
                     </ul>
                 </div>
-
+                <div class="w-full lg:w-1/2 relative" data-aos="fade-left">
+                    <div class="aspect-video rounded-3xl overflow-hidden border border-stone-100 shadow-sm">
+                        <img src="img/Entregas.webp" alt="Entregas Tupi Gospel" class="w-full h-full object-cover">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <section class="py-16 bg-brand-bg border-y border-slate-100">
+    <section class="py-32 bg-premium-cream border-y border-stone-200 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="bg-white rounded-3xl p-10 premium-shadow flex flex-col lg:flex-row items-center gap-12 border border-slate-200 overflow-hidden group border-premium hover:border-brand-gold/20 hover:shadow-xl transition-all" data-aos="fade-up">
-                
-                <div class="w-full lg:w-2/5 rounded-3xl overflow-hidden aspect-video lg:aspect-square bg-slate-50 flex items-center justify-center relative premium-shadow border-4 border-slate-100 shadow-inner">
-                    <img src="img/locacao-de-mesa.webp" alt="Locação de Mesas" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700">
-                </div>
-                
-                <div class="w-full lg:w-3/5 text-center lg:text-left relative">
-                    <i class="ph-bold ph-chair text-7xl text-brand-gold/15 absolute -top-8 -right-8 lg:-right-4 rotate-12"></i>
-                    <div class="inline-block px-5 py-2 bg-brand-gold text-white text-sm font-extrabold rounded-full mb-5 uppercase tracking-wider shadow-md">Serviço de Locação</div>
-                    <h3 class="text-5xl md:text-6xl font-extrabold text-brand-black mb-6 tracking-tighter leading-tight">Estruturas para Eventos</h3>
-                    <p class="text-gray-700 text-xl leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0 font-medium">
-                        Vai fazer uma festa, culto ou reunião? Fornecemos o aluguel de jogos de mesas, cadeiras e toalhas Oxford limpas e de qualidade para receber bem os seus convidados.
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24">
+                <div class="w-full lg:w-1/2" data-aos="fade-left">
+                    <span class="text-premium-blue font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Locação</span>
+                    <h2 class="text-4xl md:text-6xl font-serif text-premium-charcoal mb-8 tracking-tight">Estrutura para <br> <span class="italic">seus momentos.</span></h2>
+                    <p class="text-stone-500 text-lg font-light leading-relaxed mb-10">
+                        Seja um culto especial, uma reunião de família ou um evento comunitário, fornecemos mesas, cadeiras e toalhas Oxford de alta qualidade.
                     </p>
+                    <button type="button" data-open-phone-modal class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-premium-charcoal text-white font-bold hover:bg-stone-800 transition-all">
+                        Solicitar Orçamento
+                    </button>
+                </div>
+                <div class="w-full lg:w-1/2" data-aos="fade-right">
+                    <div class="aspect-[16/10] rounded-3xl overflow-hidden border border-stone-100 shadow-sm">
+                        <img src="img/locacao-de-mesa.webp" alt="Locação de Mesas" class="w-full h-full object-cover">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="quem-somos" class="py-24 bg-slate-50 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                
-                <div class="w-full lg:w-1/2 relative group" data-aos="fade-up">
-                    <div class="absolute -inset-4 bg-brand-gold/20 rounded-[3rem] transform -rotate-3 group-hover:-rotate-6 transition-transform duration-500 blur-xl"></div>
-                    
-                    <div class="relative rounded-3xl overflow-hidden aspect-square md:aspect-[4/3] premium-shadow border-8 border-white bg-white shadow-xl">
-                        <img src="img/historia.webp" alt="História Tupi Gospel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter drop-shadow-sm">
+    <section id="quem-somos" class="py-32 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                <div class="w-full lg:w-1/2" data-aos="fade-up">
+                    <div class="aspect-square rounded-full overflow-hidden border-8 border-stone-50 shadow-inner max-w-md mx-auto">
+                        <img src="img/historia.webp" alt="Nossa História" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
                     </div>
                 </div>
-
                 <div class="w-full lg:w-1/2" data-aos="fade-up" data-aos-delay="100">
-                    <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-slate-200 text-brand-gold font-bold text-base uppercase tracking-widest mb-6 shadow-sm">
-                        <i class="ph-bold ph-storefront text-xl"></i>
-                        A Nossa História
-                    </div>
-                    
-                    <h2 class="text-5xl md:text-6xl font-extrabold text-brand-black mb-6 tracking-tighter leading-tight">
-                        Muito mais que uma loja, <span class="text-brand-blue">um propósito.</span>
-                    </h2>
-                    
-                    <p class="text-xl text-gray-600 mb-6 leading-relaxed font-medium">
-                        A Tupi Gospel nasceu com a missão de ser um porto seguro espiritual e estrutural. Nosso desejo sempre foi abençoar vidas e apoiar os ministérios e as famílias da nossa amada região do Tupi.
+                    <span class="text-premium-blue font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Sobre Nós</span>
+                    <h2 class="text-4xl md:text-5xl font-serif text-premium-charcoal mb-8 tracking-tight">Um propósito <br> <span class="italic">que nos move.</span></h2>
+                    <p class="text-stone-500 font-light leading-relaxed mb-6">
+                        A Tupi Gospel nasceu com a missão de ser um porto seguro espiritual e estrutural para a nossa amada região do Tupi.
                     </p>
-                    
-                    <p class="text-xl text-gray-600 mb-8 leading-relaxed font-medium">
-                        Sabemos que por trás de cada Bíblia existe uma vida sendo transformada, e em cada momento preparado, há um propósito maior sendo cumprido. É por isso que nosso atendimento não é mecanizado; ele é focado em você, feito com a transparência e o respeito que o povo de Deus merece.
+                    <p class="text-stone-500 font-light leading-relaxed mb-10">
+                        Sabemos que por trás de cada Bíblia existe uma vida sendo transformada. É por isso que nosso atendimento é focado em você, feito com a transparência e o respeito que o povo de Deus merece.
                     </p>
-                    
-                    <div class="mt-12 pt-6 border-t border-slate-200">
-                        <div class="flex items-center gap-5">
-                            <div class="w-16 h-16 rounded-full bg-brand-gold/10 border-2 border-dashed border-brand-gold/30 flex items-center justify-center text-brand-gold shadow-inner">
-                                <i class="ph-fill ph-user-circle text-4xl"></i>
-                            </div>
-                            <div>
-                                <p class="font-bold text-2xl text-brand-navy leading-tight">Adelicio</p>
-                                <p class="text-sm font-semibold text-gray-500 uppercase tracking-widest mt-1">Proprietário</p>
-                            </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-stone-50 flex items-center justify-center text-premium-blue">
+                            <i class="ph-fill ph-user-circle text-3xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-premium-charcoal">Adelicio</p>
+                            <p class="text-xs text-stone-400 uppercase tracking-widest">Proprietário</p>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-white relative overflow-hidden border-t border-slate-200" id="palavra-do-dia">
+    <section class="py-32 bg-premium-cream relative overflow-hidden border-t border-stone-200" id="palavra-do-dia">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16" data-aos="fade-up">
-                <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-50 border border-slate-200 text-brand-gold font-bold text-sm uppercase tracking-widest mb-6 shadow-sm">
-                    <i class="ph-bold ph-book-open text-lg"></i>
-                    Palavra para o seu dia
-                </div>
-                <h2 class="text-4xl md:text-5xl font-extrabold text-brand-black tracking-tighter leading-tight max-w-2xl mx-auto">
-                    Abra a Bíblia e receba uma mensagem.
+                <span class="text-premium-blue font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Mensagem de Fé</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-premium-charcoal max-w-2xl mx-auto">
+                    Abra a Bíblia e receba uma <br> <span class="italic text-premium-blue">palavra para o seu coração.</span>
                 </h2>
             </div>
 
             <div class="flex flex-col items-center justify-center">
-                <div class="perspective-[2000px] w-full max-w-[400px] h-[500px] cursor-pointer group">
+                <div class="perspective-[3000px] w-full max-w-[380px] h-[520px] cursor-pointer group">
                     <div id="the-bible" class="relative w-full h-full transform-style-3d transition-transform duration-1000">
-                        
-                        <div class="absolute left-0 top-0 w-8 h-full bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 rounded-l-2xl transform -translate-x-4 translate-z-[-2px] shadow-2xl"></div>
-
-                        <div id="bible-cover" class="absolute inset-0 origin-left transform-style-3d transition-transform duration-1000 z-30 shadow-2xl rounded-r-2xl bg-brand-navy border border-slate-800">
-                            <div class="absolute inset-0 backface-hidden flex flex-col items-center justify-center p-8 bg-bible-leather shadow-[inset_0_0_40px_rgba(0,0,0,0.9),inset_0_0_10px_rgba(255,255,255,0.02)]">
-                                
-                                <div class="absolute inset-4 border-[2px] border-brand-gold/30 rounded-xl"></div>
-                                <div class="absolute inset-6 border-[1px] border-brand-gold/20 rounded-lg"></div>
-                                
-                                <i class="ph-fill ph-book-bookmark text-6xl text-brand-gold mb-6 drop-shadow-[0_0_10px_rgba(217,119,6,0.6)] filter brightness-110"></i>
-                                
-                                <h3 class="text-white font-serif font-extrabold text-4xl tracking-widest uppercase mb-2 text-center drop-shadow-[2px_2px_4px_rgba(0,0,0,0.8)] filter brightness-110">Bíblia</h3>
-                                <h4 class="text-brand-gold font-serif text-xl italic tracking-widest mb-8 filter brightness-110">Sagrada</h4>
-                                
-                                <span class="text-slate-400 font-bold text-[10px] uppercase tracking-[0.3em] flex items-center gap-2 mt-auto bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm shadow-inner">
-                                    <i class="ph-bold ph-hand-tap text-sm text-brand-gold"></i> Clique para abrir
-                                </span>
-                            </div>
-                            <div class="absolute inset-0 backface-hidden rotate-y-180 bg-slate-950 rounded-l-2xl border-l border-slate-800 shadow-inner"></div>
+                        <!-- Spine -->
+                        <div class="absolute left-0 top-0 w-12 h-full bg-slate-950 rounded-l-xl transform -translate-x-6 translate-z-[-10px] shadow-2xl flex flex-col items-center justify-around py-12 border-r border-white/5">
+                            <div class="w-1 h-20 bg-gradient-to-b from-transparent via-[#D4AF37]/30 to-transparent"></div>
+                            <div class="w-1 h-20 bg-gradient-to-b from-transparent via-[#D4AF37]/30 to-transparent"></div>
                         </div>
 
-                        <div id="bible-pages" class="absolute inset-0 bg-[#FFFCF5] rounded-r-xl shadow-[inset_0_0_20px_rgba(0,0,0,0.05),_5px_5px_0_#e2e8f0,_10px_10px_0_#cbd5e1] border-r border-b border-brand-gold/30 z-10 flex flex-col items-center justify-center p-8 md:p-12 overflow-hidden">
-                            <div class="absolute top-0 right-10 w-6 h-[110%] bg-red-900 shadow-lg z-0" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 95%, 0 100%); border-right:1px solid rgba(0,0,0,0.3)"></div>
+                        <!-- Front Cover -->
+                        <div id="bible-cover" class="absolute inset-0 origin-left transform-style-3d transition-transform duration-[1.2s] z-30 shadow-2xl rounded-r-2xl bg-bible-leather border border-slate-900/50">
+                            <div class="absolute inset-0 backface-hidden flex flex-col items-center justify-center p-12 shadow-[inset_0_0_80px_rgba(0,0,0,0.8)]">
+                                <!-- Decorative Borders -->
+                                <div class="absolute inset-6 border-2 border-[#D4AF37]/30 rounded-lg"></div>
+                                <div class="absolute inset-8 border border-[#D4AF37]/10 rounded-md"></div>
+                                
+                                <!-- Corner Ornaments -->
+                                <div class="absolute top-10 left-10 w-6 h-6 border-t-2 border-l-2 border-[#D4AF37]/40"></div>
+                                <div class="absolute top-10 right-10 w-6 h-6 border-t-2 border-r-2 border-[#D4AF37]/40"></div>
+                                <div class="absolute bottom-10 left-10 w-6 h-6 border-b-2 border-l-2 border-[#D4AF37]/40"></div>
+                                <div class="absolute bottom-10 right-10 w-6 h-6 border-b-2 border-r-2 border-[#D4AF37]/40"></div>
+
+                                <div class="relative mb-12">
+                                    <!-- Icon removed as requested -->
+                                    <div class="absolute -inset-4 bg-[#D4AF37]/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                </div>
+                                
+                                <h3 class="text-white font-serif text-5xl tracking-[0.1em] uppercase mb-1 text-center font-bold filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Bíblia</h3>
+                                <h4 class="text-[#D4AF37] font-serif text-2xl italic tracking-[0.15em] mb-12 filter drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">Sagrada</h4>
+                                
+                                <div class="mt-auto group/btn flex flex-col items-center">
+                                    <span class="text-stone-300 font-bold text-[10px] uppercase tracking-[0.4em] mb-4 opacity-60 group-hover:opacity-100 transition-opacity">Toque para iniciar</span>
+                                    <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center animate-bounce">
+                                        <i class="ph ph-caret-down text-white/40"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Inside Cover -->
+                            <div class="absolute inset-0 backface-hidden rotate-y-180 bg-slate-900 rounded-l-2xl border-l border-slate-800 shadow-inner flex flex-col items-center justify-center p-8">
+                                <div class="w-full h-full border border-white/5 rounded-lg flex items-center justify-center">
+                                    <i class="ph ph-cross text-white/5 text-9xl"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pages Stack (Visual Depth) -->
+                        <div class="absolute right-[-4px] top-1 w-[10px] h-[99%] bg-stone-200 rounded-r shadow-sm z-0"></div>
+                        <div class="absolute right-[-8px] top-2 w-[10px] h-[98%] bg-stone-300 rounded-r shadow-sm z-[-1]"></div>
+
+                        <!-- Content Page -->
+                        <div id="bible-pages" class="absolute inset-0 bg-[#FFFDF9] rounded-r-2xl shadow-xl border-r border-b border-stone-200 z-10 flex flex-col items-center justify-center p-12 overflow-hidden">
+                            <!-- Paper Texture -->
+                            <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png')"></div>
+                            
+                            <div class="absolute top-0 right-12 w-px h-full bg-stone-200/50"></div>
+                            <div class="absolute top-0 right-14 w-px h-full bg-stone-200/30"></div>
                             
                             <div class="relative z-10 flex flex-col h-full w-full justify-between items-center text-center">
                                 <div class="mt-4">
-                                    <span class="inline-block px-4 py-1.5 rounded-full bg-brand-gold/10 text-brand-gold font-extrabold tracking-[0.2em] uppercase text-[10px] border border-brand-gold/20 shadow-sm" id="verse-reference">
-                                        Salmos 23:1
+                                    <span class="inline-block px-4 py-1.5 rounded-full bg-premium-blue/10 text-premium-blue font-bold tracking-widest uppercase text-[10px] border border-premium-blue/20" id="verse-reference">
+                                        Gênesis 1:1
                                     </span>
                                 </div>
-                                <div class="flex-grow flex items-center justify-center">
-                                    <h3 id="verse-text" class="font-serif text-2xl md:text-3xl text-brand-navy font-medium leading-[1.6] italic drop-shadow-sm">
-                                        "O Senhor é o meu pastor, e nada me faltará."
-                                    </h3>
+                                <div class="flex-grow flex items-center justify-center max-w-[280px]">
+                                    <div class="space-y-6">
+                                        <i class="ph-fill ph-quotes text-3xl text-stone-200"></i>
+                                        <h3 id="verse-text" class="font-serif text-2xl md:text-3xl text-premium-charcoal italic leading-relaxed">
+                                            "No princípio criou Deus o céu e a terra."
+                                        </h3>
+                                        <div class="w-12 h-px bg-stone-200 mx-auto"></div>
+                                    </div>
                                 </div>
-                                <div class="mb-4 opacity-50 flex flex-col items-center gap-2">
-                                    <i class="ph-fill ph-cross text-brand-gold text-sm"></i>
-                                    <p class="text-[8px] font-bold uppercase tracking-[0.3em] text-brand-navy">Tupi Gospel</p>
+                                <div class="mb-4 opacity-20">
+                                    <!-- Heart icon removed as requested -->
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
-                <button type="button" id="new-verse-button" class="mt-16 inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-brand-navy border border-slate-700 text-white font-extrabold text-lg hover:-translate-y-1 hover:bg-slate-900 transition-all opacity-0 translate-y-4 pointer-events-none duration-500 shadow-xl shadow-brand-navy/10">
-                    <i class="ph-fill ph-arrows-clockwise text-xl text-brand-gold"></i>
-                    Virar a Página
+                <button type="button" id="new-verse-button" class="mt-16 group inline-flex items-center gap-4 px-10 py-4 rounded-full bg-white border border-stone-200 text-stone-600 font-bold text-sm hover:border-premium-blue hover:text-premium-blue hover:shadow-xl hover:shadow-premium-blue/10 transition-all opacity-0 translate-y-4 pointer-events-none duration-700">
+                    <i class="ph ph-arrows-clockwise group-hover:rotate-180 transition-transform duration-500"></i>
+                    Outra Mensagem
                 </button>
             </div>
         </div>
     </section>
-
-    <section class="py-20 bg-brand-black text-white relative overflow-hidden border-t border-white/5">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.05),transparent_30%),radial-gradient(circle_at_bottom_left,_rgba(217,119,6,0.15),transparent_34%)]"></div>
+    <section class="py-32 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div class="contact-panel rounded-[2rem] p-8 md:p-12 premium-shadow" data-aos="fade-up">
-                <div class="grid grid-cols-1 lg:grid-cols-[1.25fr_0.95fr] gap-8 items-center">
-                    <div class="text-center lg:text-left">
-                        <p class="text-brand-gold font-extrabold uppercase tracking-[0.32em] text-sm mb-4">Atendimento rápido</p>
-                        <h2 class="text-4xl md:text-6xl font-extrabold tracking-tighter mb-5 leading-tight">Fale com a loja do jeito mais fácil para você.</h2>
-                        <p class="text-slate-300 text-xl font-medium leading-relaxed max-w-3xl">Ligue direto para a loja ou abra a rota no mapa. Um site simples, claro e feito para facilitar o atendimento de quem prefere resolver tudo por telefone ou presencialmente.</p>
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 text-left">
-                            <div class="contact-mini-card">
-                                <i class="ph-fill ph-phone-call text-2xl text-white"></i>
-                                <strong>Ligue direto</strong>
-                                <span>Atendimento por telefone.</span>
+            <div class="bg-premium-charcoal rounded-3xl p-12 md:p-20 shadow-2xl relative overflow-hidden" data-aos="fade-up">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-premium-blue/10 blur-[120px]"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <span class="text-premium-blue font-bold uppercase tracking-[0.2em] text-xs mb-4 block">Contato</span>
+                        <h2 class="text-4xl md:text-6xl font-serif text-white mb-8 tracking-tight leading-tight">Como podemos <br> <span class="italic">te ajudar hoje?</span></h2>
+                        <p class="text-stone-400 text-lg font-light leading-relaxed mb-12">
+                            Ligue direto para a loja ou abra a rota no mapa. Facilitamos seu atendimento para que você foque no que realmente importa.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-6">
+                                <div class="w-12 h-12 rounded-full border border-stone-800 flex items-center justify-center text-premium-blue">
+                                    <i class="ph ph-phone text-2xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-white font-bold">(31) 98281-9913</p>
+                                    <p class="text-stone-500 text-sm uppercase tracking-widest">Atendimento Direto</p>
+                                </div>
                             </div>
-                            <div class="contact-mini-card">
-                                <i class="ph-fill ph-map-trifold text-2xl text-brand-gold"></i>
-                                <strong>Abra a rota</strong>
-                                <span>Veja o caminho até a loja.</span>
-                            </div>
-                            <div class="contact-mini-card">
-                                <i class="ph-fill ph-storefront text-2xl text-emerald-400"></i>
-                                <strong>Loja física</strong>
-                                <span>R. Joaquim Cardoso, 368 - Tupi.</span>
+                            <div class="flex items-center gap-6">
+                                <div class="w-12 h-12 rounded-full border border-stone-800 flex items-center justify-center text-premium-blue">
+                                    <i class="ph ph-map-pin text-2xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-white font-bold">Rua Joaquim Cardoso, 368</p>
+                                    <p class="text-stone-500 text-sm uppercase tracking-widest">Bairro Tupi, BH</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-                        <button type="button" data-open-phone-modal class="contact-action-button contact-action-primary">
-                            <span class="contact-action-icon"><i class="ph-fill ph-phone-call text-3xl"></i></span>
-                            <span class="contact-action-copy">
-                                <strong>Ligar agora</strong>
-                                <small>Telefone da loja</small>
-                            </span>
+                    <div class="grid grid-cols-1 gap-4">
+                        <button type="button" data-open-phone-modal class="flex items-center justify-between p-8 rounded-2xl bg-white text-premium-charcoal hover:bg-stone-100 transition-all group">
+                            <span class="text-xl font-bold">Ligar agora</span>
+                            <i class="ph ph-arrow-right text-2xl group-hover:translate-x-2 transition-transform"></i>
                         </button>
-                        <a href="https://www.google.com/maps/search/?api=1&query=R.+Joaquim+Cardoso,+368+-+Tupi+B,+Belo+Horizonte+-+MG,+31842-500" target="_blank" rel="noopener noreferrer" class="contact-action-button contact-action-secondary">
-                            <span class="contact-action-icon"><i class="ph-fill ph-map-pin text-3xl"></i></span>
-                            <span class="contact-action-copy">
-                                <strong>Abrir no mapa</strong>
-                                <small>Traçar caminho agora</small>
-                            </span>
+                        <a href="https://www.google.com/maps/search/?api=1&query=R.+Joaquim+Cardoso,+368+-+Tupi+B,+Belo+Horizonte+-+MG,+31842-500" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-8 rounded-2xl border border-stone-800 text-white hover:border-premium-blue transition-all group">
+                            <span class="text-xl font-bold font-serif italic">Abrir no mapa</span>
+                            <i class="ph ph-arrow-right text-2xl group-hover:translate-x-2 transition-transform"></i>
                         </a>
                     </div>
                 </div>
@@ -528,106 +441,81 @@
         </div>
     </section>
 
-    <section class="w-full h-96 relative border-t-2 border-dashed border-slate-100 group">
-        <iframe src="https://www.google.com/maps?q=R.+Joaquim+Cardoso,+368+-+Tupi+B,+Belo+Horizonte+-+MG,+31842-500&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="filter grayscale hover:grayscale-0 transition-all duration-700"></iframe>
-        <div class="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-brand-bg to-transparent pointer-events-none"></div>
-        <div class="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-brand-black to-transparent pointer-events-none opacity-50"></div>
+    <section class="w-full h-[600px] relative filter grayscale contrast-125 brightness-75 hover:grayscale-0 hover:contrast-100 hover:brightness-100 transition-all duration-1000">
+        <iframe src="https://www.google.com/maps?q=R.+Joaquim+Cardoso,+368+-+Tupi+B,+Belo+Horizonte+-+MG,+31842-500&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
-    <footer class="bg-brand-black text-gray-400">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
-                
-                <div class="flex flex-col items-center md:items-start space-y-5 md:col-span-2">
-                    <div class="flex items-center text-white">
-                        <span class="text-4xl font-extrabold tracking-tighter">Tupi <span class="text-brand-blue">Gospel</span></span>
-                    </div>
-                    <p class="text-base text-gray-500 leading-relaxed max-w-md font-medium mt-2">
-                        Loja de artigos religiosos no Bairro Tupi, em Belo Horizonte, com atendimento de confiança, variedade de produtos e locação para eventos.
+    <footer class="bg-premium-charcoal text-stone-400 py-24">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-20">
+                <div class="space-y-6">
+                    <a href="#" class="flex flex-col">
+                        <span class="font-serif italic text-2xl tracking-tight text-white leading-none">Tupi <span class="text-premium-blue font-normal">Gospel</span></span>
+                        <span class="text-[9px] text-stone-500 font-medium uppercase tracking-[0.3em] mt-1">Desde 2010</span>
+                    </a>
+                    <p class="text-sm font-light leading-relaxed max-w-xs">
+                        Loja especializada em artigos religiosos e serviços de locação em Belo Horizonte. Compromisso com a sua fé e comunidade.
                     </p>
                 </div>
-
                 <div class="space-y-6">
-                    <h4 class="text-sm font-extrabold text-gray-600 uppercase tracking-widest">Atendimento</h4>
-                    <div class="flex flex-col gap-4 text-lg font-semibold text-white items-center md:items-start">
-                        <a href="tel:+5531982819913" class="flex items-center gap-3 hover:text-brand-gold transition-colors">
-                            <i class="ph-bold ph-phone text-xl text-brand-gold"></i> (31) 98281-9913
-                        </a>
-                        <a href="tel:+5531985239497" class="flex items-center gap-3 hover:text-brand-blue transition-colors">
-                            <i class="ph ph-phone text-xl text-gray-600"></i> (31) 98523-9497
-                        </a>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-widest">Atendimento</h4>
+                    <div class="space-y-4">
+                        <a href="tel:+5531982819913" class="block text-lg hover:text-premium-blue transition-colors">(31) 98281-9913</a>
+                        <a href="tel:+5531985239497" class="block text-lg hover:text-premium-blue transition-colors">(31) 98523-9497</a>
                     </div>
                 </div>
-
                 <div class="space-y-6">
-                    <h4 class="text-sm font-extrabold text-gray-600 uppercase tracking-widest">Localização</h4>
-                    <div class="flex flex-col gap-4 text-base items-center md:items-start text-white">
-                        <p class="flex items-start gap-3">
-                            <i class="ph-fill ph-map-pin text-2xl text-gray-500 shrink-0 mt-0.5"></i>
-                            <span class="leading-relaxed text-lg">R. Joaquim Cardoso, 368<br>Tupi B, Belo Horizonte - MG, 31842-500</span>
-                        </p>
-                        <p class="flex items-center gap-3 font-bold text-brand-white bg-slate-800 px-5 py-2 rounded-full text-sm mt-2 border border-slate-700 shadow-inner">
-                            <i class="ph-bold ph-clock text-xl text-brand-gold animate-pulse"></i>
-                            Seg - Dom, 08h - 19h
-                        </p>
-                    </div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-widest">Endereço</h4>
+                    <p class="text-sm font-light leading-relaxed">
+                        Rua Joaquim Cardoso, 368<br>
+                        Tupi B, Belo Horizonte - MG
+                    </p>
+                    <p class="text-xs font-bold text-stone-500 uppercase tracking-widest border border-stone-800 inline-block px-4 py-1.5 rounded-full">
+                        Seg - Dom, 08h - 19h
+                    </p>
                 </div>
-
             </div>
-        </div>
-
-        <div class="border-t border-slate-800 bg-slate-950">
-            <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
-                <p class="text-base text-gray-600 font-semibold">
-                    © <span id="current-year"></span> Tupi Gospel. Todos os direitos reservados.
-                </p>
-                
-                <span class="group flex items-center gap-2 text-base text-gray-600 transition-colors"><span class="uppercase tracking-widest text-[12px] font-extrabold">Site desenvolvido por</span><span class="font-extrabold">Elberth</span></span>
+            <div class="pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs uppercase tracking-widest font-medium">© <span id="current-year"></span> Tupi Gospel. Todos os direitos reservados.</p>
+                <p class="text-[10px] uppercase tracking-[0.2em]">Desenvolvido por <span class="text-white font-bold">Elberth</span></p>
             </div>
         </div>
     </footer>
 
-    <button id="fab-button" class="fixed bottom-8 right-8 bg-brand-blue text-white w-16 h-16 rounded-full shadow-2xl shadow-brand-blue/30 hover:bg-blue-700 hover:scale-110 transition-all z-40 flex items-center justify-center group overflow-hidden" title="Ligar agora">
-        <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity"></div>
-        <i class="ph-fill ph-phone-call text-3xl group-hover:rotate-12 transition-transform"></i>
+    <button id="fab-button" class="fixed bottom-8 right-8 bg-premium-charcoal text-white w-14 h-14 rounded-full shadow-2xl hover:scale-110 transition-all z-40 flex items-center justify-center" title="Ligar agora">
+        <i class="ph ph-phone text-2xl"></i>
     </button>
 
-    <div id="phone-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-brand-navy/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
-        <div class="bg-white rounded-3xl p-8 max-w-sm w-full mx-4 premium-shadow transform scale-95 transition-transform duration-300 shadow-2xl" id="phone-modal-content">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-2xl font-extrabold text-brand-navy">Ligue para a loja</h3>
-                <button id="close-modal" class="text-gray-400 hover:text-brand-gold transition-colors">
-                    <i class="ph-bold ph-x text-2xl"></i>
+    <div id="phone-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-stone-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-3xl p-10 max-w-sm w-full mx-4 shadow-2xl transform scale-95 transition-transform duration-300" id="phone-modal-content">
+            <div class="flex justify-between items-center mb-8">
+                <h3 class="text-2xl font-serif italic text-premium-charcoal">Contato</h3>
+                <button id="close-modal" class="text-stone-400 hover:text-premium-blue transition-colors">
+                    <i class="ph ph-x text-2xl"></i>
                 </button>
             </div>
             
-            <p class="text-gray-600 mb-6 font-medium">Escolha o telefone que deseja usar para falar com a loja.</p>
+            <p class="text-stone-500 mb-8 font-light">Escolha um dos nossos números para falar diretamente com a loja.</p>
             
-            <div class="flex flex-col gap-4">
-                <a href="tel:+5531982819913" class="flex items-center justify-between w-full p-4 rounded-xl border border-slate-200 hover:border-brand-blue hover:bg-blue-50 transition-all group">
+            <div class="space-y-4">
+                <a href="tel:+5531982819913" class="flex items-center justify-between p-6 rounded-2xl border border-stone-100 hover:border-premium-blue hover:bg-stone-50 transition-all group">
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-colors">
-                            <i class="ph-fill ph-phone text-2xl"></i>
+                        <div class="w-10 h-10 rounded-full bg-stone-50 flex items-center justify-center text-premium-blue">
+                            <i class="ph ph-phone"></i>
                         </div>
-                        <div class="text-left">
-                            <span class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Telefone 1</span>
-                            <span class="block text-lg font-extrabold text-brand-navy">(31) 98281-9913</span>
-                        </div>
+                        <span class="text-lg font-bold text-premium-charcoal">(31) 98281-9913</span>
                     </div>
-                    <i class="ph-bold ph-caret-right text-brand-blue opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    <i class="ph ph-caret-right text-stone-300 group-hover:text-premium-blue transition-colors"></i>
                 </a>
 
-                <a href="tel:+5531985239497" class="flex items-center justify-between w-full p-4 rounded-xl border border-slate-200 hover:border-brand-gold hover:bg-orange-50 transition-all group">
+                <a href="tel:+5531985239497" class="flex items-center justify-between p-6 rounded-2xl border border-stone-100 hover:border-premium-blue hover:bg-stone-50 transition-all group">
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-colors">
-                            <i class="ph-fill ph-phone text-2xl"></i>
+                        <div class="w-10 h-10 rounded-full bg-stone-50 flex items-center justify-center text-premium-blue">
+                            <i class="ph ph-phone"></i>
                         </div>
-                        <div class="text-left">
-                            <span class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-0.5">Telefone 2</span>
-                            <span class="block text-lg font-extrabold text-brand-navy">(31) 98523-9497</span>
-                        </div>
+                        <span class="text-lg font-bold text-premium-charcoal">(31) 98523-9497</span>
                     </div>
-                    <i class="ph-bold ph-caret-right text-brand-gold opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    <i class="ph ph-caret-right text-stone-300 group-hover:text-premium-blue transition-colors"></i>
                 </a>
             </div>
         </div>
